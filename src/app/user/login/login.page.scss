@@ -1,0 +1,19 @@
+
+ion-icon{
+    width: 80px;
+    height: 80px;
+   transform: translate(100px);
+   color: aqua;
+}
+
+ion-content.background{
+   --ion-background-color: rgb(64, 91, 126);
+ }
+ ion-button{
+    padding: -50px;
+    margin: 50px;
+ }
+ p{
+    float: right;
+    color: deeppink;
+ }

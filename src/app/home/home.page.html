@@ -1,0 +1,67 @@
+
+  <!-- <ion-header [translucent]="true">
+    <ion-toolbar>
+      
+      <ion-title>
+       welcome page
+      </ion-title>
+    </ion-toolbar>
+    
+  </ion-header>
+  
+  <ion-content [fullscreen]="false">
+    <ion-button >
+      <ion-menu-button menu="main-menu"  >
+  
+      </ion-menu-button>
+  
+    </ion-button>
+    <p>BIENVENUE</p>
+  </ion-content> -->
+
+  <ion-content class="bg">
+    <body>
+      <ion-app>
+        <ion-menu side="start" content-id="main-content">
+          <ion-header>
+            <ion-toolbar translucent>
+              <ion-title >Menu</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-list>
+              <ion-item routerLink="/list-apprenant">
+                <ion-icon name="people-outline" slot="start"></ion-icon>
+                <ion-label>Apprenant</ion-label>
+              </ion-item>
+              <ion-item  routerLink="/login">
+                <ion-icon name="log-out-outline" slot="start"></ion-icon>
+                <ion-label>Deconnecter</ion-label>
+              </ion-item>
+              
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+    
+        <div id="main-content">
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+              </ion-buttons>
+            </ion-toolbar>
+            
+            <h2> <ion-icon name="walk-outline"></ion-icon> Bienvenue {{login}} {{currentTime}}</h2>
+          </ion-header>
+         
+        </div>
+      </ion-app>
+    
+      <script>
+        async function openMenu() {
+          await menuController.open();
+        }
+      </script>
+      
+    </body>
+  </ion-content>

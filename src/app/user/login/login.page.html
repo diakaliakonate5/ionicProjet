@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+   <form [formGroup]="formData" (ngSubmit)="getFormData()">
+    <ion-icon name="person-circle-outline"></ion-icon>
+     <ion-item >
+       <ion-label color="primary" position="floating">login</ion-label>
+       <ion-input type="text" formControlName="login" required></ion-input>
+     </ion-item>
+
+     <ion-item >
+      <ion-label color="primary" position="floating">password</ion-label>
+      <ion-input id="password" formControlName="password" required></ion-input>
+    </ion-item>
+    <p> <a style="color: red;" href="#">Mot de passe oublié?</a>  </p>
+    <ion-button color="secondary" type="submit" expand="block" [disabled]=!formData.valid>connexion</ion-button>
+  </form>
+</ion-content>
